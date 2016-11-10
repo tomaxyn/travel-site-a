@@ -1,0 +1,20 @@
+
+.wrapper {	
+	
+	overflow: hidden;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	max-width: 74rem;
+	margin-right: auto;
+	margin-left: auto;
+
+	&--medium{
+		max-width: 62rem;	
+	}
+
+	.wrapper {
+		padding-right: 0;
+		padding-left: 0;
+	}
+}
+
