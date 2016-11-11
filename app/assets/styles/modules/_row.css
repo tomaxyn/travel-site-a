@@ -5,6 +5,11 @@
 	@mixin cleaRfix;	
 	
 	
+	&__b-margin-until-medium {
+		margin-bottom: 2rem;
+	}
+
+
 	@mixin atMedium {
 		&--gutters {
 		margin-right: -4rem;
@@ -13,15 +18,24 @@
 		&--gutters > div {
 		padding-right: 4rem;
 	}
-	
+		&__b-margin-until-medium {
+			margin-bottom: 0;
+		}
+
 		&__medium-4 {
 		float: left;
 		width: 33.34%
+		}
+		&__medium-4--larger {
+			width: 36%
 		}
 
 		&__medium-8 {
 		float: left;
 		width: 66.66%
+		}
+		&__medium-8--smaller {
+			width: 64%
 		}
 	}
 

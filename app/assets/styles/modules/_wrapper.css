@@ -4,7 +4,7 @@
 	overflow: hidden;
 	padding-left: 1rem;
 	padding-right: 1rem;
-	max-width: 74rem;
+	max-width: 76rem;
 	margin-right: auto;
 	margin-left: auto;
 
@@ -16,5 +16,12 @@
 		padding-right: 0;
 		padding-left: 0;
 	}
+
+	&--b-margin {
+		margin-bottom: 1.15rem;
+
+		@mixin atSmall {
+			margin-bottom: 3.5rem;
+		}	}
 }
 
