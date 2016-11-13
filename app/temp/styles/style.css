@@ -1163,6 +1163,10 @@ a{
   }
 }
 
+.site-header__menu-content--is-visible {
+  display: block;
+}
+
 .site-footer{
 	background-color: #2f5572;
 	color: #fff;
