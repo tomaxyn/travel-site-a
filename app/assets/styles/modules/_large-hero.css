@@ -5,13 +5,18 @@
 	&__image{
 		display: block;
 	}
-    &__text-content {    
+    &__text-content {   
+    padding-top: 5rem; 
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
 	left: 0;
 	width: 100%;
 	text-align: center;
+
+	@mixin atMedium {
+		padding-top: 4rem; 
+	}
    } 
   	&__title{
 	font-weight: 300;
