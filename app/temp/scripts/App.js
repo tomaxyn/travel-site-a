@@ -71,7 +71,7 @@
 	var mobileMenu = new _MobileMenu2.default();
 
 	new _RevealOnScroll2.default((0, _jquery2.default)('.feature-item'), "80%");
-	new _RevealOnScroll2.default((0, _jquery2.default)('.testimonial'), "60%");
+	new _RevealOnScroll2.default((0, _jquery2.default)('.testimonial'), "65%");
 
 	var stickyHeader = new _StickyHeader2.default();
 	var modal = new _Modal2.default();
