@@ -11,6 +11,10 @@
 	&--medium{
 		max-width: 62rem;	
 	}
+	
+	&--narrow {
+		max-width: 29.5rem;
+	}
 
 	.wrapper {
 		padding-right: 0;
