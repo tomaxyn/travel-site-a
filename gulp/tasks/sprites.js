@@ -2,10 +2,24 @@ var gulpo = require('gulp');
 var svgSprite = require('gulp-svg-sprite');
 var grename = require('gulp-rename');
 var deletion = require('del');
+var svg2png = require('gulp-svg2png');
+
 
 var config = {
+	shape: {
+		spacing: {
+			padding: 1
+		}
+	},
 	mode: {
 		css:{
+			variables: {
+				replaceSvgWithPng: function() {
+					return function(sprite, render) {
+						return render(sprite).split('.svg').join('.png')
+					}
+				}
+			},
 			sprite: 'sprite.svg',
 			render:{
 				css: {
@@ -27,8 +41,15 @@ gulpo.task('createSprite', ['beginClean'], function(){
 		.pipe(gulpo.dest('./app/temp/sprite/'));
 });
 
-gulpo.task('copySpriteGraphic', ['createSprite'], function() {
-	return gulpo.src('./app/temp/sprite/css/**/*.svg')
+gulpo.task('createPngCopy', ['createSprite'], function() {
+    return gulpo.src('./app/temp/sprite/css/*.svg')
+        .pipe(svg2png())
+        .pipe(gulpo.dest('./app/temp/sprite/css'));
+    
+});
+
+gulpo.task('copySpriteGraphic', ['createPngCopy'], function() {
+	return gulpo.src('./app/temp/sprite/css/**/*.{svg,png}')
 			.pipe(gulpo.dest('./app/assets/images/sprites'));
 });
 
@@ -42,5 +63,5 @@ gulpo.task('endClean', ['copySpriteGraphic', 'copySpriteCSS'], function(){
 	return deletion('./app/temp/sprite');
 });
 
-gulpo.task('icons', ['beginClean', 'createSprite', 'copySpriteGraphic', 'copySpriteCSS', 'endClean']);
+gulpo.task('icons', ['beginClean', 'createSprite', 'createPngCopy', 'copySpriteGraphic', 'copySpriteCSS', 'endClean']);
 

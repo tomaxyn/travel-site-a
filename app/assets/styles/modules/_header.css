@@ -94,7 +94,7 @@
 			transform: translateX(0);
 
 			.site-header--dark & {
-				transform: scale(0.51);
+				transform: scale(0.5);
 				transition: transform 0.3s ease-out;
 			}
 		}

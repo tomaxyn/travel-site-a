@@ -2,10 +2,12 @@
   "name": "travel-site-a",
   "version": "0.0.1",
   "dependencies": {
+    "gulp-svg2png": "^0.3.0",
     "jquery": "^3.1.1",
     "jquery-smooth-scroll": "^2.0.0",
     "lazysizes": "^2.0.7",
     "normalize.css": "^5.0.0",
+    "picturefill": "^3.0.2",
     "waypoints": "^4.0.1"
   },
   "devDependencies": {
@@ -16,6 +18,7 @@
     "browser-sync": "^2.17.5",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
+    "gulp-modernizr": "^1.0.0-alpha",
     "gulp-postcss": "^6.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-svg-sprite": "^1.3.1",
